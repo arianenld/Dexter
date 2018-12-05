@@ -1,0 +1,299 @@
+@import "~bulma/sass/utilities/_all";
+
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin-top: 10%;
+
+}
+
+.main-container {
+  border: 5px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  border-radius: 10px;
+  //background: lightblue;
+  background-image: url("~assets/bgPoke.png");
+  background-size: cover;
+
+
+  @include from($tablet) {
+    width: 650px;
+    margin: auto;
+  }
+
+  @include tablet {
+    width: 650px;
+    margin: 50px auto;
+  }
+
+  @include widescreen-only {
+    width: 650px;
+    margin: 50px auto;
+  }
+}
+
+.poke-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  height: 80%;
+  padding: 10px;
+  margin-right: 10px;
+  overflow: scroll;
+}
+
+.poke-cell {
+  width: 120px;
+  height: 120px;
+  margin: 10px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+}
+
+.detail-view {
+  width: 45%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 10px solid;
+}
+
+.sprite-image {
+  width: 80%;
+  height: 150px;
+  margin: 10px auto;
+  background-color: #585858;
+  border: 15px solid #DEDEDE;
+  border-bottom-left-radius: 25px;
+  color: #585858;
+  box-shadow: -2px 4px;
+}
+
+img.sprite-image {
+  width: 180px;
+}
+
+.data-wrapper {
+  width: 67%;
+  height: 110px;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #585858;
+}
+
+.data-name {
+  margin: 0 0 5px;
+  font-size: 10px;
+}
+
+.data-char {
+  font-size: 10px;
+  font-size: 10px;
+}
+
+.searchPoke {
+  position: absolute !important;
+  top: 4%;
+  left: 55%;
+  height: 7%;
+  //@include tablet {
+    //top: 3%;
+    //right: %;
+  //}
+
+}
+
+.searchPoke input {
+  height: 30px;
+  width: 100%;
+  border: 1px solid;
+  background-color: transparent;
+}
+
+.loader {
+  position: absolute;
+  left: 440px;
+}
+
+.breeding-rhombus-spinner {
+  position: absolute !important;
+  top: 30px !important;
+  left: 300px;
+}
+
+.light {
+  width: 35%;
+  padding: 5px;
+  margin-top: 10px;
+  color: black;
+  border-radius: 10px;
+  width: 45px;
+  border: 1px solid;
+}
+
+.light.red {
+  background-color: red;
+}
+
+.light.blue {
+  background-color: blue;
+}
+
+.green-screen {
+  width: 80%;
+  padding: 5px;
+  margin-left: 20px;
+  background-color: #9bbba0;
+  border: 1px solid;
+  color: black;
+  border-radius: 5px;
+  @include mobile {
+    margin-left: 0px !important;
+    width: 100%;
+  }
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #8a8a8a;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: -2px 4px;
+  margin-left: 10px;
+}
+
+.column.indicator {
+  margin-left: -200px;
+  @include mobile {
+    margin-left: 0px !important;
+    padding: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+.columns.mobile-indcator {
+  @include mobile {
+    display: flex;
+  }
+}
+
+.column.indicator .dot {
+  height: 10px !important;
+  width: 10px !important;
+}
+
+.column.indicator .dot.red {
+  background-color: red
+}
+
+.column.indicator .dot.yellow {
+  background-color: yellow
+}
+
+.column.indicator .dot.green {
+  background-color: green
+}
+
+@-webkit-keyframes color_change {
+  from { background-color: blue; }
+  to { background-color: red; }
+}
+@-moz-keyframes color_change {
+  from { background-color: blue; }
+  to { background-color: red; }
+}
+@-ms-keyframes color_change {
+  from { background-color: blue; }
+  to { background-color: red; }
+}
+@-o-keyframes color_change {
+  from { background-color: blue; }
+  to { background-color: red; }
+}
+@keyframes color_change {
+  from { background-color: blue; }
+  to { background-color: red; }
+}
+
+.color-change {
+  background-color: blue;
+  border: 1px solid white;
+  border-radius: 50px;
+  width: 25px;
+  height: 25px;
+  -webkit-animation: color_change 1s infinite alternate;
+  -moz-animation: color_change 1s infinite alternate;
+  -ms-animation: color_change 1s infinite alternate;
+  -o-animation: color_change 1s infinite alternate;
+  animation: color_change 1s infinite alternate;
+  box-shadow: -2px 4px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.horizontal {
+  background-color: gray;
+  height: 50px;
+  width: 10px;
+  box-shadow: -2px 4px;
+}
+
+.vertical {
+  background-color: gray;
+  height: 10px;
+  width: 50px;
+  position: absolute;
+  top: 33px;
+  left: -8px;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.column.absolute {
+  position: absolute;
+  @include from($tablet) {
+    left: 250px !important;
+    top: 300px !important;
+  }
+  @include tablet {
+    left: 350px !important;
+    top: 300px !important;
+  }
+  @include widescreen-only {
+    left: 450px !important;
+    top: 300px !important;
+  }
+  @include desktop {
+    left: 550px;
+    top: 300px;
+  }
+}
+
+.columns.controls {
+  display: flex;
+}
+
+.column .light {
+  @include mobile {
+    height: 10px !important;
+    width: 5px !important;
+  }
+}
+
+.pokeName {
+  font-size: 13px;
+  color: black;
+  text-align: center;
+}
