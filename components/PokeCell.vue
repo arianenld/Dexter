@@ -28,8 +28,11 @@ export default {
     },
   },
   methods: {
-    handleOnClick(pokeKey) {
+    /*handleOnClick(pokeKey) {
       this.$store.dispatch('showLoader', true)
+      handleOnClick(pokeKey){
+        this.$store.dispatch('showPokemon', pokeKey)
+      }
       axios
         .get(`https://pokeapi.co/api/v2/pokemon/${pokeKey}/`)
         .then(response => {
@@ -48,7 +51,7 @@ export default {
         }).catch(err => {
           this.$store.dispatch('showLoader', false)
         })
-    }
+    }*/
   }
 }
 </script>
